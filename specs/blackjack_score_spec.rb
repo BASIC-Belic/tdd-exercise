@@ -25,16 +25,16 @@ describe 'Blackjack Score' do
   end
 
   it 'facecards have values calculated correctly' do
-    # # Arrange
-    # hand = ['King', 'Queen', 'Jack']
-    #
-    # # Act
-    # score = blackjack_score(hand)
-    #
-    # #Assert
-    # expect(hand[0]).must_equal 10
-    # expect(hand[1]).must_equal 10
-    # expect(hand[2]).must_equal 10
+    # Arrange
+    hand = ['King', 'Queen', 'Jack']
+
+    # Act
+    score = blackjack_score(hand)
+
+    #Assert
+    expect(hand[0]).must_equal 10
+    expect(hand[1]).must_equal 10
+    expect(hand[2]).must_equal 10
 
   end
 
