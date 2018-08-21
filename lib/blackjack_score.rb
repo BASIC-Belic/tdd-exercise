@@ -8,23 +8,26 @@ VALID_CARDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 'King', 'Queen', 'Jack']
 def blackjack_score(hand)
 
   score = 0
-  hand.each do |card|
+  hand.map! do |card|
 
-    # if card == '1'
-    #   ace = 11
-    # end
+    temporary_aces = []
 
-    if card == 'King' || 'Queen' || 'Jack'
-      score += 10
-    else
-      score += card
+    if card == 1
+      card
+      temporary_aces << card
+    elsif card == "King" || card == "Queen" || card == "Jack"
+      10
+    else card
     end
 
+    score += card
 
-    if score == 10
-
+    temporary_aces.each do
+      if score < 10
+        score +=  10
+      end
+    end
   end
 
   return score
-
 end
